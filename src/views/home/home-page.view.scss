@@ -18,3 +18,19 @@
     padding: 40px 0 20px 0;
     margin: 0;
 }
+
+#my-site {
+    background-color: #32322C;
+
+    .img-div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 0 40px;
+    
+        h5 {
+            text-align: center;
+            margin-top: 12px;
+        }
+    }
+}
