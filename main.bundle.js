@@ -76,6 +76,7 @@ var AppComponent = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__views_bio_bio_section_view__ = __webpack_require__("./src/views/bio/bio-section.view.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__views_calwest_calwest_section_view__ = __webpack_require__("./src/views/calwest/calwest-section.view.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__views_bragging_rights_bragging_rights_section_view__ = __webpack_require__("./src/views/bragging-rights/bragging-rights-section.view.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__views_my_site_my_site_section_view__ = __webpack_require__("./src/views/my-site/my-site-section.view.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -94,6 +95,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
+
 var AppModule = /** @class */ (function () {
     function AppModule() {
     }
@@ -107,7 +109,8 @@ var AppModule = /** @class */ (function () {
                 __WEBPACK_IMPORTED_MODULE_6__views_phims_phims_section_view__["a" /* default */],
                 __WEBPACK_IMPORTED_MODULE_7__views_bio_bio_section_view__["a" /* default */],
                 __WEBPACK_IMPORTED_MODULE_8__views_calwest_calwest_section_view__["a" /* default */],
-                __WEBPACK_IMPORTED_MODULE_9__views_bragging_rights_bragging_rights_section_view__["a" /* default */]
+                __WEBPACK_IMPORTED_MODULE_9__views_bragging_rights_bragging_rights_section_view__["a" /* default */],
+                __WEBPACK_IMPORTED_MODULE_10__views_my_site_my_site_section_view__["a" /* default */]
             ],
             imports: [
                 __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */]
@@ -293,14 +296,14 @@ var BioSectionComponent = /** @class */ (function () {
 /***/ "./src/views/bragging-rights/bragging-rights-section.view.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div id=\"bragging-rights\" class=\"uk-cover-container uk-light\">  \n    <div class=\"uk-grid-collapse\" uk-grid uk-height-viewport>\n        <div class=\"uk-grid-collapse uk-child-width-1-2@s\" uk-grid>\n            <div class=\"uk-section uk-width-1-2@s\">\n                <div class=\"uk-container\">\n                    <h3>Bragging Rights Web App</h3>\n                    <div class=\"uk-grid-match\">\n                            <p> \n                                Bragging Rights was conceptualized by three women who \n                                wanted to empower other women to speak up about their \n                                achievements and the obstacles they faced in pursuit of their goals. \n                                Bragging sessions are a safe place for women to share their \n                                history represented by Agile timelines. This application\n                                is re-used by each Bragger.\n                            </p>\n                    </div>\n                </div>\n            </div>\n            <div class=\"uk-section uk-width-1-2@s\">\n                <div class=\"uk-container\">\n                    <h3>Technologies</h3>\n                    <div class=\"uk-grid-match uk-child-width-1-3@s technologies-div\" uk-grid>\n                        <div class=\"img-div\">\n                            <div>\n                                <img src=\"../../assets/img/angular.png\">\n                            </div>\n                            <h5>Angular</h5>\n                        </div>\n                        <div class=\"img-div\">\n                            <div>\n                                <img src=\"../../assets/img/ts.png\">\n                            </div>\n                            <h5>Typescript</h5>\n                        </div>\n                        <div class=\"img-div\">\n                            <div>\n                                <img src=\"../../assets/img/md.png\">\n                            </div>\n                            <h5>Material Design</h5>\n                        </div>\n                    </div>\n                </div>    \n            </div>\n        </div>\n        <div class=\"uk-width-3-3@s uk-background-cover\"></div>\n    </div>\n</div>  "
+module.exports = "<div id=\"bragging-rights\" class=\"uk-cover-container uk-light\">  \n    <div class=\"uk-grid-collapse\" uk-grid uk-height-viewport>\n        <div class=\"uk-width-1-3@s uk-background-cover\"></div>\n        <div class=\"uk-width-2-3@s\">\n            <div class=\"uk-section\">\n                <div class=\"uk-container\">\n                    <h3>Bragging Rights Web App</h3>\n                    <div class=\"uk-grid-match\">\n                            <p> \n                                Bragging Rights was conceptualized by three women who \n                                wanted to empower other women to speak up about their \n                                achievements and the obstacles they faced in pursuit of their goals. \n                                Bragging sessions are a safe place for women to share their \n                                history represented by Agile timelines. This application\n                                is re-used by each Bragger.\n                            </p>\n                    </div>\n                    <h3>Technologies</h3>\n                    <div class=\"uk-grid-match uk-child-width-1-3@s technologies-div\" uk-grid>\n                        <div class=\"img-div\">\n                            <div>\n                                <img src=\"../../assets/img/angular.png\">\n                            </div>\n                            <h5>Angular</h5>\n                        </div>\n                        <div class=\"img-div\">\n                            <div>\n                                <img src=\"../../assets/img/ts.png\">\n                            </div>\n                            <h5>Typescript</h5>\n                        </div>\n                        <div class=\"img-div\">\n                            <div>\n                                <img src=\"../../assets/img/md.png\">\n                            </div>\n                            <h5>Material Design</h5>\n                        </div>\n                    </div>\n                </div>\n            </div>\n        </div>\n    </div>\n</div>  "
 
 /***/ }),
 
 /***/ "./src/views/bragging-rights/bragging-rights-section.view.scss":
 /***/ (function(module, exports) {
 
-module.exports = "#bragging-rights {\n  background-color: dodgerblue; }\n\n.technologies-div {\n  margin: 0 auto; }\n\n.img-div {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: column;\n          flex-direction: column;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  padding: 0 40px; }\n\n.img-div h5 {\n    text-align: center;\n    margin-top: 12px; }\n\n.uk-background-cover {\n  background-image: url('br.9cd66dda52e4bae7963d.png');\n  background-position: top;\n  height: 300px; }\n"
+module.exports = "#bragging-rights {\n  background-color: dodgerblue; }\n\n.technologies-div {\n  margin: 0 auto;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center; }\n\n.img-div {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: column;\n          flex-direction: column;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  padding: 0 40px;\n  width: 194px; }\n\n.img-div h5 {\n    text-align: center;\n    margin-top: 12px; }\n\n.uk-background-cover {\n  background-image: url('br.5657ab7a2184f80a93d2.png');\n  background-position: top; }\n"
 
 /***/ }),
 
@@ -336,14 +339,14 @@ var BraggingRightsSectionComponent = /** @class */ (function () {
 /***/ "./src/views/calwest/calwest-section.view.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div id=\"calwest\" class=\"uk-cover-container uk-light\">  \n    <div class=\"uk-grid-collapse\" uk-grid uk-height-viewport>\n        <div class=\"uk-width-2-3@s\">\n            <div class=\"uk-section\">\n                <div class=\"uk-container\">\n                    <h3>Calwest Recycling Application Design</h3>\n                    <div class=\"uk-grid-match\">\n                        <p>\n                            Calwest Recycling is a company located in California\n                            that takes pride in recycling various types of metals.\n                            I am currently working with the company to create an \n                            application to promote efficiency in daily operations \n                            and usability for employees. We are currently in the \n                            design phase.\n                        </p>\n                    </div>\n                    <h3>Technologies</h3>\n                    <div class=\"technologies-div uk-child-width-1-2@s\" uk-grid>\n                        <div class=\"img-div\">\n                            <div>\n                                <img src=\"../../assets/img/adobe.png\">\n                            </div>\n                            <h5>Adobe Xd</h5>\n                        </div>\n                    </div>\n                </div>\n            </div>\n        </div>\n        <div class=\"uk-width-1-3 uk-background-cover\" \n             style=\"background-image: url(../../assets/img/calwest.png); background-position: left;\">\n        </div>\n    </div>\n</div>  "
+module.exports = "<div id=\"calwest\" class=\"uk-cover-container uk-light\">  \n    <div class=\"uk-grid-collapse\" uk-grid uk-height-viewport>\n        <div class=\"uk-width-2-3@s\">\n            <div class=\"uk-section\">\n                <div class=\"uk-container\">\n                    <h3>Calwest Recycling Application Design</h3>\n                    <div class=\"uk-grid-match\">\n                        <p>\n                            Calwest Recycling is a company located in California\n                            that takes pride in recycling various types of metals.\n                            I am currently working with the company to create an \n                            application to promote efficiency in daily operations \n                            and usability for employees. We are currently in the \n                            design phase.\n                        </p>\n                    </div>\n                    <h3>Technologies</h3>\n                    <div class=\"technologies-div uk-child-width-1-2@s\" uk-grid>\n                        <div class=\"img-div\">\n                            <div>\n                                <img src=\"../../assets/img/adobe.png\">\n                            </div>\n                            <h5>Adobe Xd</h5>\n                        </div>\n                    </div>\n                </div>\n            </div>\n        </div>\n        <div class=\"uk-width-1-3 uk-background-cover\"></div>\n    </div>\n</div>  "
 
 /***/ }),
 
 /***/ "./src/views/calwest/calwest-section.view.scss":
 /***/ (function(module, exports) {
 
-module.exports = "#calwest {\n  background-color: #00B707; }\n\n.technologies-div {\n  width: 50%; }\n\n.img-div {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: column;\n          flex-direction: column;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  padding: 0 40px; }\n\n.img-div h5 {\n    text-align: center;\n    margin-top: 12px; }\n"
+module.exports = "#calwest {\n  background-color: #00B707; }\n\n.img-div {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: column;\n          flex-direction: column;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  padding: 0 40px;\n  width: 194px; }\n\n.img-div h5 {\n    text-align: center;\n    margin-top: 12px; }\n\n.uk-background-cover {\n  background-image: url('calwest.76b8170ecdc54c808970.png');\n  background-position: left; }\n"
 
 /***/ }),
 
@@ -379,14 +382,14 @@ var CalwestSectionComponent = /** @class */ (function () {
 /***/ "./src/views/home/home-page.view.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"home-page\">\n    <div uk-sticky>\n        <nav class=\"uk-navbar-container uk-animation-slide-top\" \n             uk-navbar>\n             <div class=\"uk-navbar-left\">\n                <ul class=\"uk-navbar-nav\">\n                    <div id=\"links\">\n                        <app-links></app-links>\n                    </div>\n                </ul>\n            </div>\n            <div class=\"uk-navbar-right\">\n                <ul class=\"uk-navbar-nav\">\n                    <div id=\"name\" \n                         uk-scrollspy=\"cls:uk-animation-slide-left-medium uk-animation-fade; delay: 1900\">\n                        <app-animated-name></app-animated-name>\n                    </div>\n                </ul>\n            </div>\n        </nav>\n    </div>\n    <app-bio-section></app-bio-section>\n    <h1 class=\"uk-heading-line uk-text-center\"><span>Current Projects</span></h1>\n    <app-phims-section></app-phims-section>\n    <app-calwest-section></app-calwest-section>\n    <h1 class=\"uk-heading-line uk-text-center\"><span>Side Projects</span></h1>\n    <app-bragging-rights-section></app-bragging-rights-section>\n    <div id=\"my-site\" class=\"uk-cover-container uk-light uk-grid-collapse uk-child-width-1-2@s\" uk-grid>\n        <div class=\"uk-section\">\n            <div class=\"uk-container\">\n                <h3>ambyrshae.com</h3>\n                <div class=\"uk-grid-match\">\n                        <p> \n                            Please feel free to contact me via the links within \n                            the site banner.\n                        </p>\n                </div>\n            </div>\n        </div>\n        <div class=\"uk-section\">\n            <div class=\"uk-container\">\n                <h3>Technologies</h3>\n                <div class=\"uk-grid-match uk-child-width-1-3@s technologies-div\" uk-grid>\n                    <div class=\"img-div\">\n                        <div>\n                            <img src=\"../../assets/img/angular.png\">\n                        </div>\n                        <h5>Angular</h5>\n                    </div>\n                    <div class=\"img-div\">\n                        <div>\n                            <img src=\"../../assets/img/ts.png\">\n                        </div>\n                        <h5>Typescript</h5>\n                    </div>\n                    <div class=\"img-div\">\n                        <div>\n                            <img src=\"../../assets/img/uikit.png\">\n                        </div>\n                        <h5>UIKit</h5>\n                    </div>\n                </div>\n            </div>\n        </div>\n    </div> \n</div>\n"
+module.exports = "<div class=\"home-page\">\n    <div uk-sticky>\n        <nav class=\"uk-navbar-container uk-animation-slide-top\" \n             uk-navbar>\n             <div class=\"uk-navbar-left\">\n                <ul class=\"uk-navbar-nav\">\n                    <div id=\"links\">\n                        <app-links></app-links>\n                    </div>\n                </ul>\n            </div>\n            <div class=\"uk-navbar-right\">\n                <ul class=\"uk-navbar-nav\">\n                    <div id=\"name\" \n                         uk-scrollspy=\"cls:uk-animation-slide-left-medium uk-animation-fade; delay: 1900\">\n                        <app-animated-name></app-animated-name>\n                    </div>\n                </ul>\n            </div>\n        </nav>\n    </div>\n    <app-bio-section></app-bio-section>\n    <h1 class=\"uk-heading-line uk-text-center\"><span>Current Projects</span></h1>\n    <app-phims-section></app-phims-section>\n    <app-calwest-section></app-calwest-section>\n    <h1 class=\"uk-heading-line uk-text-center\"><span>Side Projects</span></h1>\n    <app-bragging-rights-section></app-bragging-rights-section>\n    <app-my-site-section></app-my-site-section>\n</div>\n"
 
 /***/ }),
 
 /***/ "./src/views/home/home-page.view.scss":
 /***/ (function(module, exports) {
 
-module.exports = ".home-page {\n  font-family: \"Raleway\", sans-serif;\n  height: 100%;\n  overflow: auto; }\n\n#name {\n  height: 64px;\n  width: 300px;\n  margin-top: 12px;\n  margin-right: 6px; }\n\n.uk-heading-line {\n  background-color: #f8f8f8;\n  padding: 40px 0 20px 0;\n  margin: 0; }\n\n#my-site {\n  background-color: #32322C; }\n\n#my-site .technologies-div {\n    width: 95%;\n    margin: 0 auto; }\n\n#my-site .img-div {\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-orient: vertical;\n    -webkit-box-direction: normal;\n        -ms-flex-direction: column;\n            flex-direction: column;\n    -webkit-box-pack: center;\n        -ms-flex-pack: center;\n            justify-content: center;\n    padding: 0 40px; }\n\n#my-site .img-div h5 {\n      text-align: center;\n      margin-top: 12px; }\n"
+module.exports = ".home-page {\n  font-family: \"Raleway\", sans-serif;\n  height: 100%;\n  overflow: auto; }\n\n#name {\n  height: 64px;\n  width: 300px;\n  margin-top: 12px;\n  margin-right: 6px; }\n\n.uk-heading-line {\n  background-color: #f8f8f8;\n  padding: 40px 0 20px 0;\n  margin: 0; }\n"
 
 /***/ }),
 
@@ -443,6 +446,49 @@ var HomeComponent = /** @class */ (function () {
 
 /***/ }),
 
+/***/ "./src/views/my-site/my-site-section.view.html":
+/***/ (function(module, exports) {
+
+module.exports = "<div id=\"my-site\" class=\"uk-cover-container uk-light uk-grid-collapse uk-child-width-1-2@s\" uk-grid>\n    <div class=\"uk-section\">\n        <div class=\"uk-container\">\n            <h3>ambyrshae.com</h3>\n            <div class=\"uk-grid-match\">\n                    <p> \n                        Please feel free to contact me via the links within \n                        the site banner.\n                    </p>\n            </div>\n        </div>\n    </div>\n    <div class=\"uk-section\">\n        <div class=\"uk-container\">\n            <h3>Technologies</h3>\n            <div class=\"uk-grid-match uk-child-width-1-3@s technologies-div\" uk-grid>\n                <div class=\"img-div\">\n                    <div>\n                        <img src=\"../../assets/img/angular.png\">\n                    </div>\n                    <h5>Angular</h5>\n                </div>\n                <div class=\"img-div\">\n                    <div>\n                        <img src=\"../../assets/img/ts.png\">\n                    </div>\n                    <h5>Typescript</h5>\n                </div>\n                <div class=\"img-div\">\n                    <div>\n                        <img src=\"../../assets/img/uikit.png\">\n                    </div>\n                    <h5>UIKit</h5>\n                </div>\n            </div>\n        </div>\n    </div>\n</div> "
+
+/***/ }),
+
+/***/ "./src/views/my-site/my-site-section.view.scss":
+/***/ (function(module, exports) {
+
+module.exports = "#my-site {\n  background-color: #32322C; }\n  #my-site .technologies-div {\n    margin: 0 auto;\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-pack: center;\n        -ms-flex-pack: center;\n            justify-content: center; }\n  #my-site .img-div {\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-orient: vertical;\n    -webkit-box-direction: normal;\n        -ms-flex-direction: column;\n            flex-direction: column;\n    -webkit-box-pack: center;\n        -ms-flex-pack: center;\n            justify-content: center;\n    padding: 0 40px;\n    width: 158px; }\n  #my-site .img-div h5 {\n      text-align: center;\n      margin-top: 12px; }\n"
+
+/***/ }),
+
+/***/ "./src/views/my-site/my-site-section.view.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+var MySiteSectionComponent = /** @class */ (function () {
+    function MySiteSectionComponent() {
+    }
+    MySiteSectionComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
+            selector: 'app-my-site-section',
+            template: __webpack_require__("./src/views/my-site/my-site-section.view.html"),
+            styles: [__webpack_require__("./src/views/my-site/my-site-section.view.scss")]
+        })
+    ], MySiteSectionComponent);
+    return MySiteSectionComponent;
+}());
+/* harmony default export */ __webpack_exports__["a"] = (MySiteSectionComponent);
+
+
+/***/ }),
+
 /***/ "./src/views/phims/phims-section.view.html":
 /***/ (function(module, exports) {
 
@@ -453,7 +499,7 @@ module.exports = "<div id=\"phims\" class=\"uk-cover-container uk-light\">  \n  
 /***/ "./src/views/phims/phims-section.view.scss":
 /***/ (function(module, exports) {
 
-module.exports = "#phims {\n  background-color: blueviolet; }\n\n.technologies-div {\n  width: 50%;\n  margin: 0 auto; }\n\n.img-div {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: column;\n          flex-direction: column;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  padding: 0 40px; }\n\n.img-div h5 {\n    text-align: center;\n    margin-top: 12px; }\n"
+module.exports = "#phims {\n  background-color: blueviolet; }\n\n.technologies-div {\n  margin: 0 auto;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center; }\n\n.img-div {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: column;\n          flex-direction: column;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  padding: 0 40px;\n  width: 194px; }\n\n.img-div h5 {\n    text-align: center;\n    margin-top: 12px; }\n"
 
 /***/ }),
 
