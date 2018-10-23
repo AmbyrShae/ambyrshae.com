@@ -10,6 +10,8 @@ import LinksComponent from '../components/links/links.component';
 import HomePage from '../views/home/home-page.view';
 import PhimsSectionComponent from './../views/phims/phims-section.view';
 import BioSectionComponent from '../views/bio/bio-section.view';
+import CalwestSectionComponent from '../views/calwest/calwest-section.view';
+import BraggingRightsSectionComponent from '../views/bragging-rights/bragging-rights-section.view';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import BioSectionComponent from '../views/bio/bio-section.view';
     AnimatedNameComponent,
     LinksComponent,
     PhimsSectionComponent,
-    BioSectionComponent
+    BioSectionComponent,
+    CalwestSectionComponent,
+    BraggingRightsSectionComponent
   ],
   imports: [
     BrowserModule
