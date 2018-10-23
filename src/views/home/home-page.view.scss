@@ -13,35 +13,8 @@
     margin-right: 6px;
 }
 
-#bio {
-    display: flex;
-}
-
-.uk-grid {
-    width: 100%;
-}
-
-#bio-img {
-    background-image: url(../../assets/img/Ki.png);
-    background-size: cover;
-    background-position-x: -8.6vw;
-    background-repeat: no-repeat;
-    border-radius: 15vw;
-    box-shadow: 2px 2px 4px rgba(105, 103, 103, 0.7);
-    opacity: 0.9;
-    height: 24vw;
-    width: 24vw;
-    margin: 30px auto;
-
-}
-
-#phims {
-    background-color: blueviolet;
-    height: 500px;
-}
-
 #calwest {
-    background-color: green;
+    background-color: #00B707;
     height: 500px;
 }
 

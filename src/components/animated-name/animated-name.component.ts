@@ -5,4 +5,4 @@ import { Component } from '@angular/core';
     templateUrl: './animated-name.component.html',
     styleUrls: ['./animated-name.component.scss']
 })
-export class AnimatedNameComponent {}
+export default class AnimatedNameComponent {}
