@@ -1,0 +1,28 @@
+<div class="home-page">
+    <div uk-sticky>
+        <nav class="uk-navbar-container uk-animation-slide-top" 
+             uk-navbar>
+             <div class="uk-navbar-left">
+                <ul class="uk-navbar-nav">
+                    <div id="links">
+                        <app-links></app-links>
+                    </div>
+                </ul>
+            </div>
+            <div class="uk-navbar-right">
+                <ul class="uk-navbar-nav">
+                    <div id="name" 
+                         uk-scrollspy="cls:uk-animation-slide-left-medium uk-animation-fade; delay: 1900">
+                        <app-animated-name></app-animated-name>
+                    </div>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <div id="bio" class="uk-cover-container" uk-height-viewport>
+        <div id="center" style="height: 200px"></div>
+    </div>
+    <div id="phims" class="uk-cover-container" uk-height-viewport></div>
+    <div id="calwest" class="uk-cover-container" uk-height-viewport></div>
+    <div id="bragging-rights" class="uk-cover-container" uk-height-viewport></div> 
+</div>

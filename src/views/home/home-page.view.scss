@@ -1,0 +1,39 @@
+.home-page {
+    font-family: var(--raleway);
+    height: 100%;
+    overflow: auto;
+}
+
+#name {
+    height: 64px;
+    margin-top: 12px;
+    margin-right: 6px;
+}
+
+#center {
+    grid-area: center;
+    background-image: url(../../assets/img/Ki.png);
+    background-size: 56vw;
+    background-position: -10.6vw -1.3vw;
+    background-repeat: no-repeat;
+    border-radius: 15vw;
+    box-shadow: 2px 2px 4px rgba(0,0,0,.7);
+    opacity: 0.9;
+    height: 200px;
+    width: 200px;
+}
+
+#phims {
+    background-color: blueviolet;
+    height: 500px;
+}
+
+#calwest {
+    background-color: green;
+    height: 500px;
+}
+
+#bragging-rights {
+    background-color: dodgerblue;
+    height: 500px;
+}

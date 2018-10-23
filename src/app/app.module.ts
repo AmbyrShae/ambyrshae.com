@@ -3,24 +3,21 @@ import { NgModule } from '@angular/core';
 
 // Components
 import { AppComponent } from './app.component';
-import { GreetingComponent } from '../components/greeting/greeting.component';
-import { HomeComponent } from '../components/home/home.component';
+import { AnimatedNameComponent } from '../components/animated-name/animated-name.component';
+import { LinksComponent } from '../components/links/links.component';
 
-// Material
-import { MatButtonModule } from '@angular/material';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
+// Views
+import HomePage from '../views/home/home-page.view';
 
 @NgModule({
   declarations: [
     AppComponent,
-    GreetingComponent,
-    HomeComponent
+    HomePage,
+    AnimatedNameComponent,
+    LinksComponent
   ],
   imports: [
-    BrowserModule,
-    MatButtonModule,
-    BrowserAnimationsModule
+    BrowserModule
   ],
   providers: [],
   bootstrap: [ AppComponent ]
