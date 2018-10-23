@@ -179,7 +179,7 @@ module.exports = "<div uk-scrollspy=\"target: > button; cls:uk-animation-fade; d
 /***/ "./src/components/links/links.component.scss":
 /***/ (function(module, exports) {
 
-module.exports = "div {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-pack: space-evenly;\n      -ms-flex-pack: space-evenly;\n          justify-content: space-evenly;\n  width: 300px; }\n\n.links-btn {\n  background-color: var(--white);\n  background-repeat: no-repeat;\n  background-position: center;\n  background-size: cover;\n  width: 56px;\n  height: 56px;\n  border-radius: 28px;\n  border: none;\n  -webkit-box-shadow: 1px 1px 2px 0px rgba(145, 146, 146, 0.7);\n          box-shadow: 1px 1px 2px 0px rgba(145, 146, 146, 0.7);\n  -webkit-transition: .5s;\n  transition: .5s; }\n\n.links-btn:hover {\n  -webkit-transform: scale(1.2);\n          transform: scale(1.2); }\n"
+module.exports = "div {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-pack: space-evenly;\n      -ms-flex-pack: space-evenly;\n          justify-content: space-evenly;\n  width: 300px; }\n\n.links-btn {\n  background-color: var(--white);\n  background-repeat: no-repeat;\n  background-position: center;\n  background-size: cover;\n  width: 56px;\n  height: 56px;\n  border-radius: 28px;\n  border: none;\n  -webkit-box-shadow: 1px 1px 2px 0px rgba(145, 146, 146, 0.7);\n          box-shadow: 1px 1px 2px 0px rgba(145, 146, 146, 0.7);\n  -webkit-transition: .5s;\n  transition: .5s; }\n\n.links-btn:hover {\n  -webkit-transform: scale(1.2);\n          transform: scale(1.2); }\n\n.links-btn:focus {\n  outline: none; }\n"
 
 /***/ }),
 
@@ -198,6 +198,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var LinksComponent = /** @class */ (function () {
     function LinksComponent() {
     }
+    LinksComponent.prototype.openURL = function (url) {
+        window.open(url, '_blank');
+    };
     LinksComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
             selector: 'app-links',
@@ -428,9 +431,6 @@ var HomeComponent = /** @class */ (function () {
         //   backgroundColor: '#000',
         //   delay: 1500
         // });
-    };
-    HomeComponent.prototype.openURL = function (url) {
-        window.open(url, '_blank');
     };
     HomeComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
