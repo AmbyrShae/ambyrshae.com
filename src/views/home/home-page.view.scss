@@ -1,26 +1,38 @@
+@import "../../assets/vars";
+
 .home-page {
-    font-family: var(--raleway);
+    font-family: $raleway;
     height: 100%;
     overflow: auto;
 }
 
 #name {
     height: 64px;
+    width: 300px;
     margin-top: 12px;
     margin-right: 6px;
 }
 
-#center {
-    grid-area: center;
+#bio {
+    display: flex;
+}
+
+.uk-grid {
+    width: 100%;
+}
+
+#bio-img {
     background-image: url(../../assets/img/Ki.png);
-    background-size: 56vw;
-    background-position: -10.6vw -1.3vw;
+    background-size: cover;
+    background-position-x: -8.6vw;
     background-repeat: no-repeat;
     border-radius: 15vw;
-    box-shadow: 2px 2px 4px rgba(0,0,0,.7);
+    box-shadow: 2px 2px 4px rgba(105, 103, 103, 0.7);
     opacity: 0.9;
-    height: 200px;
-    width: 200px;
+    height: 24vw;
+    width: 24vw;
+    margin: 30px auto;
+
 }
 
 #phims {
