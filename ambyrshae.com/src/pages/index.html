@@ -1,8 +1,25 @@
 <div id="index" class="h-100">
-  <div class="grid-x full">{{> title-bar}}</div>
+  <div class="grid-x full">
+    <!-- Title bar -->
+    <!-- Shows on small screen size -->
+    <div class="title-bar" data-responsive-toggle="responsive-menu" data-hide-for="medium">
+      <button class="menu-icon" type="button" data-toggle="offCanvas"></button>
+      <img src="./../assets/img/ambyrshae.svg"/>
+    </div>
+  </div>
   <div class="grid-x h-100">
     <div id="responsive-menu" class="cell shrink">{{> navigation}}</div>
-    <div class="cell auto">{{> content}}</div>
+    <div class="cell auto">
+      <!-- Main content -->
+      <div id="content" class="h-100 sections">
+        <section id="projects">{{> projects}}</section>
+        <section id="bes">{{> bes}}</section>
+        <section id="phims">{{> phims}}</section>
+        <section id="pais">{{> pais}}</section>
+        <section id="fv">{{> fv}}</section>
+        <section id="fqf">{{> fqf}}</section>
+      </div>
+    </div>
   </div>
 </div>
 

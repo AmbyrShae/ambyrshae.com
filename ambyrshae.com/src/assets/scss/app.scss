@@ -63,56 +63,63 @@
 @include motion-ui-transitions;
 @include motion-ui-animations;
 
+//  Table of Contents:
+//
+//   1. Global classes
+//   2. HTML & body
+//   3. Index
+//   4. Title bar
+//   5. Navigation
+//   6. Content
+//   7. Canvas
 
+// 1. Global classes
+// ---------
 
-html,
-body{
-  height: 100%;
-  font-family: 'Poppins', sans-serif;
-}
+// Height
+// ---------
 
-// GLOBAL CLASSES
 .h-100 {
-  height: 100% !important;
+  height: 100vh !important;
 }
+
+// Padding
+// ---------
+
 .pb-1 {
   padding-bottom: 1rem !important;
 }
 .pb-2 {
   padding-bottom: 2rem !important;
 }
-.pb-4 {
-  padding-bottom: 4rem !important;
-}
-.pb-8 {
-  padding-bottom: 8rem !important;
-}
 
-// MOBILE MENU
-.title-bar {
-  width: 100%;
-  padding: 2rem;
-  background-color: rgba($color: #fff, $alpha: 0.7);
-  color: #000;
+// Margin
+// ---------
 
-  .menu-icon {
-    margin-right: 2rem;
-    &::after {
-      background: #000;
-      height: 3px;
-      box-shadow: 0 7px 0 #000, 0 14px 0 #000;
-    }
-  }
+.mb-0 {
+  margin-bottom: 0 !important;
 }
 
-// MAIN CONTENT
+// 2. HTML & body
+// ---------
+
+html,
+body{
+  font-family: 'Poppins', sans-serif;
+  height: 100%;
+  scroll-behavior: smooth;
+}
+
+// 3. Index
+// ---------
+
 #index {
   #responsive-menu {
+    backdrop-filter: blur( 4px );
     background: rgba( 255, 255, 255, 0.25 );
-    padding: 3rem;
     border-right: 1px solid rgba( 255, 255, 255, 0.18 );
     box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-    backdrop-filter: blur( 4px );
+    padding: 3rem;
   }
 
   .cell {
@@ -120,25 +127,47 @@ body{
   }
 }
 
-// SIDE NAVIGATION
+// 4. Title bar
+// ---------
+
+.title-bar {
+  background-color: rgba($color: #fff, $alpha: 0.7);
+  color: #000;
+  padding: 2rem;
+  width: 100%;
+
+  .menu-icon {
+    margin-right: 2rem;
+
+    &::after {
+      background: #000;
+      box-shadow: 0 7px 0 #000, 0 14px 0 #000;
+      height: 3px;
+    }
+  }
+}
+
+// 5. Navigation
+// ---------
+
 #nav {
   .menu-text {
+    color: rgba($color: #000000, $alpha: 0.9);
     font-family: 'Montserrat', sans-serif;
     font-size: 2rem;
     font-weight: 300;
     letter-spacing: 0.1rem;
-    color: rgba($color: #000000, $alpha: 0.9);
 
     a {
-      padding: 0;
       color: rgba($color: #000000, $alpha: 0.9);
+      padding: 0;
     }
   }
 
   .menu-sub-text a {
     color: rgba($color: #272727, $alpha: 0.9);
-    line-height: 2rem;
     font-weight: 400;
+    line-height: 2rem;
 
     &:focus, &:active {
       font-weight: 500;
@@ -146,31 +175,39 @@ body{
 
   }
 
-  a:hover, a:focus, a:active {
-    transition: all 250ms ease-in-out;
+  a {
+    transition: background 500ms ease-in-out;
+  }
+
+  a:hover, a:focus, a:active, .active a {
     background: linear-gradient(to right, #B440F6 0%, #336BF6 50%);
     background-clip: text;
+    font-weight: 500;
+    transition: background 500ms ease-in-out;
     -webkit-text-fill-color: transparent;
   }
 }
 
-// PROJECTS
-#content {
-  display: flex;
-  justify-content: center;
-  background: rgba( 255, 255, 255, 0.1 );
-  .card {
-    height: 90%;
-    align-self: center;
-    background: transparent;
-    border: none;
-    margin: 0 2rem;
-    padding: 0 2rem;
-    overflow-y: auto;
+// 6. Content
+// ---------
 
-    &::-webkit-scrollbar {
-      display: none;
-    }
+#content {
+  box-sizing: border-box;
+  background: rgba( 255, 255, 255, 0.1 );
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  section {
+    height: 100vh;
+    padding: 10rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    scroll-snap-align: start;
 
     h1 {
       font-family: 'Montserrat', sans-serif;
@@ -198,10 +235,6 @@ body{
       }
     }
 
-    .grid-x {
-      justify-content: center;
-    }
-
     .orbit {
       background: rgba( 255, 255, 255, 0.25 );
       box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
@@ -213,9 +246,23 @@ body{
       margin-bottom: 4rem;
     }
   }
+
+  #projects {
+    h1 {
+      font-size: 4rem;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+
+    .sub-text {
+      font-size: 2rem;
+    }
+  }
 }
 
-// CANVAS
+// 7. Canvas
+// ---------
+
 canvas {
   width: 100%;
   height: 100%;
