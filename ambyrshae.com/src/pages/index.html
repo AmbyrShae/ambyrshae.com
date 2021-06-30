@@ -2,13 +2,18 @@
   <div class="grid-x full">
     <!-- Title bar -->
     <!-- Shows on small screen size -->
-    <div class="title-bar" data-responsive-toggle="responsive-menu" data-hide-for="medium">
-      <button class="menu-icon" type="button" data-toggle="offCanvas"></button>
-      <img src="./../assets/img/ambyrshae.svg"/>
+    <div class="w-100" -sticky-container>
+      <div class="title-bar" data-sticky data-responsive-toggle="responsive-menu" data-hide-for="medium">
+        <button class="menu-icon" type="button" data-toggle="offCanvas"></button>
+        <img src="./../assets/img/ambyrshae.svg"/>
+      </div>
     </div>
   </div>
   <div class="grid-x h-100">
-    <div id="responsive-menu" class="cell shrink">{{> navigation}}</div>
+    <div id="responsive-menu" class="cell shrink">
+      <img class="pb-2" src="./../assets/img/ambyrshae.svg"/>
+      {{> navigation}}
+    </div>
     <div class="cell auto">
       <!-- Main content -->
       <div id="content" class="h-100 sections">
@@ -18,6 +23,12 @@
         <section id="pais">{{> pais}}</section>
         <section id="fv">{{> fv}}</section>
         <section id="fqf">{{> fqf}}</section>
+        <section id="lucid">{{> lucid}}</section>
+        <section id="calwest">{{> calwest}}</section>
+        <section id="br">{{> bragging-rights}}</section>
+        <section id="geg">{{> ge-girls}}</section>
+        <section id="about">{{> about}}</section>
+        <section id="contact">{{> contact}}</section>
       </div>
     </div>
   </div>

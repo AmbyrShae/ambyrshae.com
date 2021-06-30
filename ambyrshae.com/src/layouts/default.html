@@ -15,28 +15,11 @@
   </head>
 <body>
   <div class="off-canvas position-left" id="offCanvas" data-off-canvas data-transition="overlap">
-    <!-- Your menu or Off-canvas content goes here -->
-    <!-- Close button -->
+    <!-- Off-canvas content -->
     <button class="close-button" aria-label="Close menu" type="button" data-close>
       <span aria-hidden="true">&times;</span>
     </button>
-
-    <!-- Menu -->
-    <img class="pb-2" src="./../assets/img/ambyrshae.svg"/>
-    <ul class="menu vertical">
-      <li class="menu-text">Projects</li>
-      <li><a href="#0">BES</a></li>
-      <li><a href="#0">PHIMS</a></li>
-      <li><a href="#0">PAIS</a></li>
-      <li><a href="#0">Field Vision</a></li>
-      <li><a href="#0">French Quarter Fest App</a></li>
-      <li><a href="#0">Lucid API Web</a></li>
-      <li><a href="#0">Calwest Recycling</a></li>
-      <li><a href="#0">Bragging Rights</a></li>
-      <li><a href="#0">GE Girls</a></li>
-      <li class="menu-text">About</li>
-      <li class="menu-text">Contact</li>
-    </ul>
+    {{> navigation}}
   </div>
 
   <div class="off-canvas-content h-100" data-off-canvas-content>
