@@ -151,13 +151,15 @@ body{
   border: 1px solid rgba( 255, 255, 255, 0.18 );
   color: #000;
   padding: 2rem;
+  position: absolute;
   -webkit-backdrop-filter: blur( 4px );
   width: 100%;
 
   button {
     margin-right: 1rem;
+
     img {
-      width: 20px;
+      width: 18px;
     }
   }
 }
@@ -167,22 +169,21 @@ body{
 
 #nav {
   .menu-text {
-    color: rgba($color: #000000, $alpha: 0.9);
+    color: rgba($color: #3f3f3f, $alpha: 0.9);
     font-family: 'Montserrat', sans-serif;
     font-size: 2rem;
     font-weight: 300;
     letter-spacing: 0.1rem;
 
     a {
-      color: rgba($color: #000000, $alpha: 0.9);
+      color: rgba($color: #3f3f3f, $alpha: 0.9);
       padding: 0;
     }
   }
 
   .menu-sub-text a {
-    color: rgba($color: #272727, $alpha: 0.9);
+    color: rgba($color: #3f3f3f, $alpha: 0.9);
     font-weight: 400;
-    line-height: 2rem;
 
     &:focus, &:active {
       font-weight: 500;
@@ -190,15 +191,10 @@ body{
 
   }
 
-  a {
-    transition: background 500ms ease-in-out;
-  }
-
   a:hover, a:focus, a:active, .active a {
     background: linear-gradient(to right, #B440F6 0%, #336BF6 50%);
     background-clip: text;
     font-weight: 500;
-    transition: background 500ms ease-in-out;
     -webkit-text-fill-color: transparent;
   }
 }
@@ -207,42 +203,48 @@ body{
 // ---------
 
 #content {
-  box-sizing: border-box;
   background: rgba( 255, 255, 255, 0.1 );
-  scroll-snap-type: y mandatory;
+  box-sizing: border-box;
   overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+
   &::-webkit-scrollbar {
     display: none;
   }
 
+  a {
+    color: #3f3f3f;
+    &:hover {
+      background: linear-gradient(to right, #B440F6 0%, #336BF6 50%);
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+
   section {
-    height: 100vh;
-    padding: 10rem;
+    align-items: center;
     display: flex;
     flex-direction: column;
+    height: 100vh;
     justify-content: center;
-    align-items: center;
+    padding: 10rem;
     scroll-snap-align: start;
 
     h1 {
+      color: #3f3f3f;
       font-family: 'Montserrat', sans-serif;
       font-size: 2rem;
       font-weight: 400;
     }
 
     p {
+      color: #3f3f3f;
       line-height: 1.5rem;
 
-      &.sub-text {
-        color: #272727;
-      }
-
       a {
-        color: #000;
         text-decoration: underline;
 
         &:hover {
-          transition: all 250ms ease-in-out;
           background: linear-gradient(to right, #B440F6 0%, #336BF6 50%);
           background-clip: text;
           -webkit-text-fill-color: transparent;
@@ -255,27 +257,33 @@ body{
 
       button {
         background: rgba( 255, 255, 255, 0.25 );
-        box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
         backdrop-filter: blur( 4px );
-        -webkit-backdrop-filter: blur( 4px );
-        border-radius: 4px;
         border: 1px solid rgba( 255, 255, 255, 0.18 );
-        color: #0a0a0a;
+        border-radius: 4px;
+        box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+        color: #3f3f3f;
         font-family: 'Montserrat', sans-serif;
         font-weight: 300;
+        -webkit-backdrop-filter: blur( 4px );
       }
     }
   }
 
   #projects {
     h1 {
-      // font-size: 4rem;
       margin-bottom: 1rem;
       text-align: center;
     }
+  }
 
-    .sub-text {
-      // font-size: 2rem;
+  #contact {
+    a {
+      font-weight: 500;
+
+      span {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 400;
+      }
     }
   }
 }
@@ -284,10 +292,30 @@ body{
 // ---------
 
 .reveal {
-  background: rgba( 255, 255, 255, 0.25 );
+  background: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur( 4px );
+  padding: 3rem 1rem;
+  -webkit-backdrop-filter: blur( 4px );
+
+  button {
+    color: #fff;
+  }
 
   img {
     margin-bottom: 1rem;
+  }
+}
+
+.off-canvas {
+  background: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur( 4px );
+  border: 1px solid rgba( 255, 255, 255, 0.18 );
+  border-radius: 4px;
+  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+  -webkit-backdrop-filter: blur( 4px );
+
+  &::-webkit-scrollbar {
+    display: none;
   }
 }
 
@@ -295,10 +323,10 @@ body{
 // ---------
 
 canvas {
-  width: 100%;
   height: 100%;
   position: absolute;
   top: 0;
+  width: 100%;
   z-index: -1;
 }
 
@@ -311,15 +339,13 @@ canvas {
     padding: 1rem;
 
     img {
-      width: 48vw;
+      width: 44vw;
     }
   }
 
   #content {
     section {
-      // justify-content: flex-start;
       padding: 1.5rem;
-      height: calc(100vh - 58px);
 
       h1 {
         font-size: 5vw;
@@ -327,25 +353,9 @@ canvas {
       }
 
       p {
+        align-self: flex-start;
         font-size: 3vw;
         text-align: justify;
-        align-self: flex-start;
-      }
-
-      .orbit {
-        height: 10rem;
-        width: 80vw;
-
-        img {
-          height: 15vh;
-          object-fit: cover;
-          object-position: left top;
-          width: 80vw;
-        }
-
-        .orbit-bullets {
-          display: none;
-        }
       }
     }
 
@@ -358,8 +368,55 @@ canvas {
 
       p {
         align-self: center;
-        // font-size: 1rem;
       }
+    }
+
+    #about {
+      img {
+        width: 72vw;
+        margin: 1rem 0;
+      }
+    }
+
+    #contact {
+      justify-content: space-evenly;
+      align-items: flex-start;
+
+      img {
+        padding-right: 0.5rem;
+      }
+
+      a {
+        font-size: 3vw;
+      }
+    }
+  }
+
+  .off-canvas {
+    #nav {
+      .menu-text {
+        font-size: 5vw;
+      }
+
+      .menu-sub-text {
+        font-size: 3vw;
+      }
+
+      .menu.vertical {
+        margin-top: 1rem;
+      }
+
+      a {
+        line-height: 1rem;
+      }
+
+      .mb-1-s {
+        margin-bottom: 1rem;
+      }
+    }
+
+    &.position-left {
+      overflow: hidden;
     }
   }
 }
