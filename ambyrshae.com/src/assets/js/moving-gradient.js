@@ -2,10 +2,9 @@ import { GlowParticle } from './glow-particle.js';
 
 const COLORS = [
   {r: 45, g: 74, b: 227}, //blue
-  {r: 250, g: 255, b: 89}, //yellow
+  {r: 255, g: 165, b: 0}, //orange
   {r: 255, g: 104, b: 248}, //purple
   {r: 44, g: 209, b: 252}, //skyblue
-  {r: 54, g: 233, b: 84}, //green
 ];
 
 export class MovingGradient {
@@ -18,7 +17,7 @@ export class MovingGradient {
 
     this.totalParticles = 15;
     this.particles = [];
-    this.maxRadius = 400;
+    this.maxRadius = 800;
     this.minRadius = 400;
 
     window.addEventListener('resize', this.resize.bind(this), false);
