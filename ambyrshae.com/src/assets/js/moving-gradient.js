@@ -18,7 +18,7 @@ export class MovingGradient {
 
     this.totalParticles = 15;
     this.particles = [];
-    this.maxRadius = 900;
+    this.maxRadius = 400;
     this.minRadius = 400;
 
     window.addEventListener('resize', this.resize.bind(this), false);
