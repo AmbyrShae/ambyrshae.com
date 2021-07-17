@@ -8,11 +8,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Foundation for Sites</title>
     <link rel="stylesheet" href="{{root}}assets/css/app.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
   </head>
 <body>
+  <div class="off-canvas position-left" id="offCanvas" data-off-canvas data-transition="overlap">
+    {{> navigation}}
+  </div>
 
-{{!-- Pages you create in the src/pages/ folder are inserted here when the flattened page is created. --}}
-{{> body}}
+  <div class="off-canvas-content h-100" data-off-canvas-content>
+    <!-- src/pages/ content -->
+    {{> body}}
+  </div>
 
 <script src="{{root}}assets/js/app.js"></script>
 </body>
