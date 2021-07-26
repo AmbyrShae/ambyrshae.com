@@ -205,6 +205,7 @@ body{
     background: linear-gradient(to right, #B440F6 0%, #336BF6 50%);
     background-clip: text;
     font-weight: 500;
+    -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
 
@@ -235,6 +236,7 @@ body{
     &:hover {
       background: linear-gradient(to right, #B440F6 0%, #336BF6 50%);
       background-clip: text;
+      -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
   }
@@ -267,6 +269,7 @@ body{
         &:hover {
           background: linear-gradient(to right, #B440F6 0%, #336BF6 50%);
           background-clip: text;
+          -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
         }
       }
