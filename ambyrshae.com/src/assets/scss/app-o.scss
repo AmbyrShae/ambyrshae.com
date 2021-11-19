@@ -122,14 +122,33 @@ body{
   height: 100%;
   scroll-behavior: smooth;
   overflow: hidden;
-  color: #3b3b3b;
 }
 
 // 3. Index
 // ---------
 
 #index {
-  
+  #responsive-menu {
+    backdrop-filter: blur( 4px );
+    background: rgba( 255, 255, 255, 0.25 );
+    border-right: 1px solid rgba( 255, 255, 255, 0.18 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    padding: 3rem;
+
+    img {
+      max-width: 16rem;
+    }
+
+    overflow-y: scroll;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  .cell {
+    height: 100%;
+  }
 }
 
 // 4. Title bar
@@ -206,23 +225,19 @@ body{
   background: rgba( 255, 255, 255, 0.1 );
   box-sizing: border-box;
   overflow-y: scroll;
+  scroll-snap-type: y mandatory;
 
   &::-webkit-scrollbar {
     display: none;
   }
 
   a {
-    // color: #6666E8;
-    // color: #ff576d;
-    color: #3b3b3b;
-    margin-bottom: 1rem;
+    color: #fff;
     &:hover {
-      color: #2ac5e0;
-      // background: linear-gradient(to right, #B440F6 0%, #336BF6 50%);
-      // background-clip: text;
-      // -webkit-background-clip: text;
-      // -webkit-text-fill-color: transparent;
-      border-bottom: 1px solid #2ac5e0;
+      background: linear-gradient(to right, #B440F6 0%, #336BF6 50%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
   }
 
@@ -232,17 +247,32 @@ body{
     height: 100vh;
     min-height: fit-content;
     padding: 10rem;
+    scroll-snap-align: start;
 
     h1 {
+      color: #fff;
       font-family: 'Montserrat', sans-serif;
       font-size: 2rem;
       font-weight: 400;
+      text-align: center;
     }
 
     p {
       align-self: flex-start;
-      line-height: 1.3rem;
+      color: #fff;
+      line-height: 1.5rem;
       text-align: justify;
+
+      a {
+        text-decoration: underline;
+
+        &:hover {
+          background: linear-gradient(to right, #B440F6 0%, #336BF6 50%);
+          background-clip: text;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+      }
     }
 
     .modal {
@@ -262,38 +292,15 @@ body{
   }
 
   #projects {
-    // margin: 4rem 40rem;
+    h1 {
+      font-size: 4rem;
+      font-weight: 800;
+      margin-bottom: 2rem;
+      text-align: center;
+    }
 
-    div {
-      h1 {
-        font-size: 4rem;
-        font-weight: 700;
-        margin-bottom: 2rem;
-        // color: #34c9e4;
-        // color: #6666E8;
-      }
-
-      img {
-        height: 50vh;
-        align-self: flex-end;
-        // margin-top: -3rem;
-        z-index: -1;
-      }
-
-      a {
-        font-size: 0.7rem;
-        align-self: flex-end;
-      }
-
-      button {
-        // background-color: #ff851b;
-        background-color: #2ac5e0;
-        border-radius: 2rem;
-        padding: 1rem 2rem;
-        font-weight: 600;
-        margin-top: 1.4rem;
-        width: 10rem;
-      }
+    p {
+      align-self: center;
     }
   }
 
@@ -382,7 +389,8 @@ canvas {
 
   #content {
     section {
-      padding: 2rem;
+      padding: 1.5rem;
+      padding-top: 100px;
 
       h1 {
         font-size: 5vw;
@@ -394,26 +402,10 @@ canvas {
     }
 
     #projects {
-      div {
-        h1 {
-          font-size: 2.5rem;
-          font-weight: 700;
-          margin-bottom: 1rem;
-        }
-
-        img {
-          height: 30vh;
-          align-self: center;
-          // object-fit: contain;
-        }
-
-        a {
-          align-self: center;
-        }
-
-        button {
-          align-self: center;
-        }
+      h1 {
+        font-size: 3rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
       }
     }
 
@@ -483,13 +475,4 @@ canvas {
 @media only screen and (min-width: 992px) {}
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {
-  #content #projects {
-    // margin: 4rem 40rem;
-
-    img {
-      margin-top: -3rem;
-      margin-left: 10rem;
-    }
-  }
-}
+@media only screen and (min-width: 1200px) {}
