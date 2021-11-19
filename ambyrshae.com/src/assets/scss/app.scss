@@ -67,9 +67,9 @@
 //
 //   1. Global classes
 //   2. HTML & body
-//   3. Index
-//   4. Title bar
-//   5. Navigation
+//   3.
+//   4. Accordion
+//   5.
 //   6. Content
 //   7. Reveal
 //   8. Canvas
@@ -125,18 +125,10 @@ body{
   color: #3b3b3b;
 }
 
-// 3. Index
-// ---------
-
-#index {
-
-}
-
 // 4. Accordion
 // ---------
 
 .accordion {
-  margin-top: 2rem;
   max-width: 950px;
   margin-left: auto;
   margin-right: auto;
@@ -147,13 +139,6 @@ body{
       background-color: transparent;
     }
   }
-}
-
-// 5. Navigation
-// ---------
-
-#nav {
-
 }
 
 // 6. Content
@@ -362,10 +347,6 @@ canvas {
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
-  .title-bar {
-
-  }
-
   #content {
     section {
       padding: 2rem;
@@ -433,10 +414,6 @@ canvas {
   }
 
   .off-canvas {
-    #nav {
-
-    }
-
     &.position-left {
       overflow: hidden;
     }
@@ -466,10 +443,6 @@ canvas {
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
-  .accordion {
-    margin-top: 0;
-  }
-
   #content {
     #projects {
       img {
