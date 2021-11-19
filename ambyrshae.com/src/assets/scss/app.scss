@@ -132,11 +132,21 @@ body{
 
 }
 
-// 4. Title bar
+// 4. Accordion
 // ---------
 
-.title-bar {
+.accordion {
+  margin-top: 2rem;
+  max-width: 950px;
+  margin-left: auto;
+  margin-right: auto;
 
+  .accordion-title {
+    font-size: 1rem;
+    &:hover {
+      background-color: transparent;
+    }
+  }
 }
 
 // 5. Navigation
@@ -160,7 +170,6 @@ body{
 
   a {
     color: #3b3b3b;
-    margin-bottom: 1rem;
     &:hover {
       color: #2ac5e0;
       border-bottom: 1px solid #2ac5e0;
@@ -225,13 +234,16 @@ body{
         align-self: flex-end;
       }
 
-      button {
+      a.button {
         background-color: #2ac5e0;
         border-radius: 2rem;
         padding: 1rem 2rem;
         font-weight: 600;
         margin-top: 1.4rem;
         width: 10rem;
+        color: #fff;
+        font-size: 0.9rem;
+        align-self: flex-start;
       }
     }
   }
@@ -384,7 +396,7 @@ canvas {
           align-self: center;
         }
 
-        button {
+        a.button {
           align-self: center;
         }
       }
@@ -454,6 +466,10 @@ canvas {
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
+  .accordion {
+    margin-top: 0;
+  }
+
   #content {
     #projects {
       img {
