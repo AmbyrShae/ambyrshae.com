@@ -1,14 +1,56 @@
 <div id="index" class="h-100">
   <div id="content" class="sections">
     <section class="h-100" id="projects">{{> projects}}</section>
-    <section id="bes">{{> bes}}</section>
-    <section id="phims">{{> phims}}</section>
-    <section id="pais">{{> pais}}</section>
-    <section id="fv">{{> fv}}</section>
-    <section id="fqf">{{> fqf}}</section>
-    <section id="lucid">{{> lucid}}</section>
-    <section id="br">{{> bragging-rights}}</section>
-    <section id="geg">{{> ge-girls}}</section>
+    <ul class="accordion" data-accordion data-multi-expand="true" data-allow-all-closed="true">
+      <li class="accordion-item" data-accordion-item>
+        <a href="#" class="accordion-title">BES</a>
+        <div class="accordion-content" data-tab-content >
+          <section id="bes">{{> bes}}</section>
+        </div>
+      </li>
+      <li class="accordion-item" data-accordion-item>
+        <a href="#" class="accordion-title">PHIMS</a>
+        <div class="accordion-content" data-tab-content>
+          <section id="phims">{{> phims}}</section>
+        </div>
+      </li>
+      <li class="accordion-item" data-accordion-item>
+        <a href="#" class="accordion-title">PAIS</a>
+        <div class="accordion-content" data-tab-content>
+          <section id="pais">{{> pais}}</section>
+        </div>
+      </li>
+      <li class="accordion-item" data-accordion-item>
+        <a href="#" class="accordion-title">Field Vision</a>
+        <div class="accordion-content" data-tab-content>
+          <section id="fv">{{> fv}}</section>
+        </div>
+      </li>
+      <li class="accordion-item" data-accordion-item>
+        <a href="#" class="accordion-title">FQF</a>
+        <div class="accordion-content" data-tab-content>
+          <section id="fqf">{{> fqf}}</section>
+        </div>
+      </li>
+      <li class="accordion-item" data-accordion-item>
+        <a href="#" class="accordion-title">Lucid</a>
+        <div class="accordion-content" data-tab-content>
+          <section id="lucid">{{> lucid}}</section>
+        </div>
+      </li>
+      <li class="accordion-item" data-accordion-item>
+        <a href="#" class="accordion-title">Bragging Rights</a>
+        <div class="accordion-content" data-tab-content>
+          <section id="br">{{> bragging-rights}}</section>
+        </div>
+      </li>
+      <li class="accordion-item" data-accordion-item>
+        <a href="#" class="accordion-title">GE Girls</a>
+        <div class="accordion-content" data-tab-content>
+          <section id="geg">{{> ge-girls}}</section>
+        </div>
+      </li>
+    </ul>
     <section id="about">{{> about}}</section>
     <section id="contact">{{> contact}}</section>
   </div>
