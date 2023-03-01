@@ -7608,7 +7608,7 @@ textarea.form-control-lg {
 }
 
 .fs-1 {
-  font-size: calc(1.375rem + 1.5vw) !important;
+  font-size: 2.75rem !important;
 }
 
 .fs-2 {
@@ -7629,6 +7629,30 @@ textarea.form-control-lg {
 
 .fs-6 {
   font-size: 1rem !important;
+}
+
+@media (min-width: 992px) {
+  .fs-1 {
+    font-size: 4.5rem !important;
+  }
+}
+
+@media (min-width: 1200px) {
+  .fs-1 {
+    font-size: 5rem !important;
+  }
+
+  .fs-2 {
+    font-size: 2rem !important;
+  }
+
+  .fs-3 {
+    font-size: 1.75rem !important;
+  }
+
+  .fs-4 {
+    font-size: 1.5rem !important;
+  }
 }
 
 .fst-italic {
@@ -11250,23 +11274,6 @@ textarea.form-control-lg {
     text-align: center !important;
   }
 }
-@media (min-width: 1200px) {
-  .fs-1 {
-    font-size: 5rem !important;
-  }
-
-  .fs-2 {
-    font-size: 2rem !important;
-  }
-
-  .fs-3 {
-    font-size: 1.75rem !important;
-  }
-
-  .fs-4 {
-    font-size: 1.5rem !important;
-  }
-}
 @media print {
   .d-print-inline {
     display: inline !important;
@@ -11319,7 +11326,13 @@ body {
 }
 
 .page-section {
-  padding: 8rem 0;
+  padding: 4rem 0;
+}
+
+@media (min-width: 992px) {
+  .page-section {
+    padding: 8rem 0;
+  }
 }
 
 .scale {
