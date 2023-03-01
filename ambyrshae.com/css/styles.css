@@ -11322,11 +11322,11 @@ body {
   padding: 8rem 0;
 }
 
-section.page-section > i {
+.scale {
   transition: all .2s ease-in-out;
 }
 
-section.page-section > i {
+.scale:hover {
   transform: scale(1.1);
 }
 
