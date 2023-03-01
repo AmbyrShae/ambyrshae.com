@@ -41,7 +41,7 @@
   --bs-danger: #dc3545;
   --bs-light: #f8f9fa;
   --bs-dark: #212529;
-  --bs-primary-rgb: 244, 98, 58;
+  --bs-primary-rgb: 33, 49, 41;
   --bs-secondary-rgb: 108, 117, 125;
   --bs-success-rgb: 25, 135, 84;
   --bs-info-rgb: 13, 202, 240;
@@ -111,11 +111,20 @@ h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1 {
 }
 
 h1, .h1 {
-  font-size: calc(1.375rem + 1.5vw);
+  font-size: 3.25rem;
+  letter-spacing: -1px;
+  line-height: 1;
+  font-family: 'PT Sans', sans-serif;
+  font-weight: 700;
+}
+@media (min-width: 992px) {
+   h1, .h1 {
+    font-size: 5rem;
+  }
 }
 @media (min-width: 1200px) {
   h1, .h1 {
-    font-size: 2.5rem;
+    font-size: 5.5rem;
   }
 }
 
@@ -7767,7 +7776,7 @@ textarea.form-control-lg {
 }
 
 .text-white {
-  --bs-text-opacity: 1;
+  --bs-text-opacity: 0.9;
   color: rgba(var(--bs-white-rgb), var(--bs-text-opacity)) !important;
 }
 
@@ -7789,6 +7798,12 @@ textarea.form-control-lg {
 .text-white-50 {
   --bs-text-opacity: 1;
   color: rgba(255, 255, 255, 0.5) !important;
+}
+
+.text-white-25 {
+  --bs-text-opacity: 1;
+  color: rgba(255, 255, 255, 0.25) !important;
+  font-weight: 400;
 }
 
 .text-reset {
@@ -11237,7 +11252,7 @@ textarea.form-control-lg {
 }
 @media (min-width: 1200px) {
   .fs-1 {
-    font-size: 2.5rem !important;
+    font-size: 5rem !important;
   }
 
   .fs-2 {
@@ -11305,6 +11320,14 @@ body {
 
 .page-section {
   padding: 8rem 0;
+}
+
+section.page-section > i {
+  transition: all .2s ease-in-out;
+}
+
+section.page-section > i {
+  transform: scale(1.1);
 }
 
 .text-white-75 {
