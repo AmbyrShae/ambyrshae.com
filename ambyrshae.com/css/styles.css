@@ -11355,8 +11355,8 @@ body {
 hr.divider {
   height: 0.2rem;
   max-width: 3.25rem;
-  margin: 1.5rem auto;
-  background-color: #f4623a;
+  margin: 4rem auto;
+  background-color: #FFD4D4;
   opacity: 1;
 }
 
@@ -11366,7 +11366,7 @@ hr.divider-light {
 
 #mainNav {
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
-  background-color: #fff;
+  background-color: #FFFFE8;
   transition: background-color 0.2s ease;
 }
 #mainNav .navbar-brand {
@@ -11415,13 +11415,13 @@ hr.divider-light {
     color: #212529;
   }
   #mainNav.navbar-shrink .navbar-brand:hover {
-    color: #f4623a;
+    color: #7A9F3B;
   }
   #mainNav.navbar-shrink .navbar-nav .nav-item .nav-link {
     color: #212529;
   }
   #mainNav.navbar-shrink .navbar-nav .nav-item .nav-link:hover {
-    color: #f4623a;
+    color: #7A9F3B;
   }
 }
 
@@ -11469,6 +11469,28 @@ header.intro h1, header.intro .h1 {
   header.intro h1, header.intro .h1 {
     font-size: 5.5rem;
   }
+}
+
+#phims {
+  background-image: url("../assets/img/portfolio/phims.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 30rem;
+}
+
+#bes {
+  background-image: url("../assets/img/portfolio/bes.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 30rem;
+}
+
+#pais {
+  background-image: url("../assets/img/portfolio/pais.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  min-height: 30rem;
 }
 
 #portfolio .container-fluid, #portfolio .container-sm, #portfolio .container-md, #portfolio .container-lg, #portfolio .container-xl, #portfolio .container-xxl {
