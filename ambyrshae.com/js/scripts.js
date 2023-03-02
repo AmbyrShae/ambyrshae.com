@@ -23,7 +23,7 @@ window.addEventListener('DOMContentLoaded', event => {
 
     };
 
-    // Shrink the navbar 
+    // Shrink the navbar
     navbarShrink();
 
     // Shrink the navbar when page is scrolled
@@ -55,5 +55,26 @@ window.addEventListener('DOMContentLoaded', event => {
     new SimpleLightbox({
         elements: '#portfolio a.portfolio-box'
     });
+
+    // Animate on scroll
+    var animateOnScroll = function () {
+        var animatedEls = document.querySelectorAll('h1');
+        animatedEls.forEach(function(el) {
+            var vwTop = window.pageYOffset;
+            var vwBottom = (window.pageYOffset + window.innerHeight);
+            var elTop = el.offsetTop;
+            var elHeight = el.offsetHeight;
+
+            if (vwBottom > elTop && ((vwTop - elHeight) < elTop)) {
+                el.classList.add('animate__fadeIn');
+            } else {
+                el.classList.remove('animate__fadeIn');
+            }
+        });
+    };
+    // Activate animation
+    animateOnScroll();
+    // Activate animation when page is scrolled
+    document.addEventListener('scroll', animateOnScroll);
 
 });

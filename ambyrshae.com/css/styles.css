@@ -41,7 +41,7 @@
   --bs-danger: #dc3545;
   --bs-light: #f8f9fa;
   --bs-dark: #212529;
-  --bs-primary-rgb: 13, 58, 32;
+  --bs-primary-rgb: 10, 44, 24;
   --bs-secondary-rgb: 108, 117, 125;
   --bs-success-rgb: 25, 135, 84;
   --bs-info-rgb: 13, 202, 240;
@@ -11435,6 +11435,9 @@ header.intro {
   background: #fff;
   background-attachment: scroll;
   background-size: cover;
+}
+header.intro h1.delay {
+  /* animation-delay: 1.5s; */
 }
 
 header.greetings {
