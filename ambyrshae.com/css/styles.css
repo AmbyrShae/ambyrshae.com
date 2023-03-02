@@ -11382,7 +11382,7 @@ hr.divider-light {
   padding: 0.75rem 0;
 }
 #mainNav .navbar-nav .nav-item .nav-link:hover, #mainNav .navbar-nav .nav-item .nav-link:active {
-  color: #f4623a;
+  color: #7A9F3B;
 }
 #mainNav .navbar-nav .nav-item .nav-link.active {
   color: #7A9F3B !important;
@@ -11396,14 +11396,14 @@ hr.divider-light {
     color: #212529;
   }
   #mainNav .navbar-brand:hover {
-    color: #fff;
+    color: #7A9F3B;
   }
   #mainNav .navbar-nav .nav-item .nav-link {
     color: #212529;
     padding: 0 1rem;
   }
   #mainNav .navbar-nav .nav-item .nav-link:hover {
-    color: #fff;
+    color: #7A9F3B;
   }
   #mainNav .navbar-nav .nav-item:last-child .nav-link {
     padding-right: 0;
