@@ -41,6 +41,9 @@ dist
 *.swp
 .cache
 .idea
+.babelrc
+.bowerrc
+.browserslistrc
 
 # e2e
 /e2e/*.js
