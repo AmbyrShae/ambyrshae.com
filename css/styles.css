@@ -3222,11 +3222,11 @@ textarea.form-control-lg {
 
 .btn-light {
   color: #000;
-  background-color: #f8f9fa;
-  border-color: #f8f9fa;
+  background-color: #fffff7;
+  border-color: #fffff7;
 }
 .btn-light:hover {
-  color: #7A9F3B;
+  color: #578200;
   background-color: #f9fafb;
   border-color: #f9fafb;
 }
@@ -7852,11 +7852,11 @@ textarea.form-control-lg {
 }
 
 .bg-primary {
-  background-color: rgba(255, 255, 232, 1) !important;
+  background-color: rgba(255, 255, 247, 1) !important;
 }
 
 .bg-secondary {
-  background-color: rgba(255, 212, 212, 1) !important;
+  background-color: rgba(27, 27, 27, 1) !important;
 }
 
 .bg-success {
@@ -11345,7 +11345,7 @@ body {
 
 .btn-xl {
   padding: 1.25rem 2.25rem;
-  font-size: 0.85rem;
+  font-size: 1rem;
   font-weight: 700;
   text-transform: uppercase;
   border: none;
@@ -11356,7 +11356,7 @@ hr.divider {
   height: 0.2rem;
   max-width: 3.25rem;
   margin: 4rem auto;
-  background-color: #FFD4D4;
+  background-color: #6DA300;
   opacity: 1;
 }
 
@@ -11366,7 +11366,7 @@ hr.divider-light {
 
 #mainNav {
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
-  background-color: #FFFFE8;
+  background-color: #FFFFF7;
   transition: background-color 0.2s ease;
 }
 #mainNav .navbar-brand {
@@ -11378,14 +11378,14 @@ hr.divider-light {
   color: #212529;
   font-family: "Merriweather Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-weight: 700;
-  font-size: 0.9rem;
+  font-size: 1rem;
   padding: 0.75rem 0;
 }
 #mainNav .navbar-nav .nav-item .nav-link:hover, #mainNav .navbar-nav .nav-item .nav-link:active {
-  color: #7A9F3B;
+  color: #578200;
 }
 #mainNav .navbar-nav .nav-item .nav-link.active {
-  color: #7A9F3B !important;
+  color: #578200 !important;
 }
 @media (min-width: 992px) {
   #mainNav {
@@ -11396,32 +11396,32 @@ hr.divider-light {
     color: #212529;
   }
   #mainNav .navbar-brand:hover {
-    color: #7A9F3B;
+    color: #6DA300;
   }
   #mainNav .navbar-nav .nav-item .nav-link {
     color: #212529;
     padding: 0 1rem;
   }
   #mainNav .navbar-nav .nav-item .nav-link:hover {
-    color: #7A9F3B;
+    color: #578200;
   }
   #mainNav .navbar-nav .nav-item:last-child .nav-link {
     padding-right: 0;
   }
   #mainNav.navbar-shrink {
-    background-color: #ffffe8;
+    background-color: #fffff7;
   }
   #mainNav.navbar-shrink .navbar-brand {
     color: #212529;
   }
   #mainNav.navbar-shrink .navbar-brand:hover {
-    color: #7A9F3B;
+    color: #6DA300;
   }
   #mainNav.navbar-shrink .navbar-nav .nav-item .nav-link {
     color: #212529;
   }
   #mainNav.navbar-shrink .navbar-nav .nav-item .nav-link:hover {
-    color: #7A9F3B;
+    color: #578200;
   }
 }
 
