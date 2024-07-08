@@ -11528,3 +11528,14 @@ header.intro h1, header.intro .h1 {
 #portfolio .container-fluid .portfolio-box:hover .portfolio-box-caption, #portfolio .container-sm .portfolio-box:hover .portfolio-box-caption, #portfolio .container-md .portfolio-box:hover .portfolio-box-caption, #portfolio .container-lg .portfolio-box:hover .portfolio-box-caption, #portfolio .container-xl .portfolio-box:hover .portfolio-box-caption, #portfolio .container-xxl .portfolio-box:hover .portfolio-box-caption {
   opacity: 1;
 }
+
+.icon-links i,
+.icon-links h2 {
+    transition: color 0.3s ease-in-out;
+}
+
+.icon-links:hover {
+  i, h2 {
+    color: #6DA300 !important;
+  }
+}
