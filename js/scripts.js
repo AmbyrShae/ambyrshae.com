@@ -5,7 +5,7 @@
 */
 //
 // Scripts
-// 
+//
 
 window.addEventListener('DOMContentLoaded', event => {
 
@@ -76,5 +76,11 @@ window.addEventListener('DOMContentLoaded', event => {
     animateOnScroll();
     // Activate animation when page is scrolled
     document.addEventListener('scroll', animateOnScroll);
+
+    // Calculate years
+    const startYear = 2015;
+    const currentYear = new Date().getFullYear();
+    const yearsInTech = currentYear - startYear;
+    document.getElementById('yearsInTech').textContent = yearsInTech;
 
 });
