@@ -1,3 +1,35 @@
 body {
   font-family: 'Noto Sans', sans-serif;
 }
+/* ──────────────────────────────────────
+    Fade-in animation
+    ────────────────────────────────────── */
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(8px);
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Stagger delays */
+.fade-1 { animation-delay: 0.1s; }
+.fade-2 { animation-delay: 0.7s; }
+.fade-3 { animation-delay: 1.4s; }
+.fade-4 { animation-delay: 1.7s; }
+.fade-5 { animation-delay: 2.0s; }
+
+/* Respect users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .fade-in {
+    opacity: 1;
+    transform: none;
+    animation: none;
+  }
+}
