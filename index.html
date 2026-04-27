@@ -17,11 +17,12 @@
   </head>
   <body class="bg-taupe-100 min-h-screen">
     <!-- Nav bar -->
-    <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 px-36 py-6 flex items-center justify-between bg-taupe-100 border-b border-transparent tracking-wide">
+    <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 px-36 py-6 flex items-center justify-between gap-4 bg-taupe-100 border-b border-transparent tracking-wide">
       <a href="#top" class="text-xl font-semibold text-zinc-900 hover:underline active:text-zinc-700">
         AmbyrShae
       </a>
-      <div class="flex items-center gap-2">
+      <!-- Desktop pills (hidden below md) -->
+      <div class="hidden md:flex items-center gap-2">
         <a href="#experience" class="flex items-center gap-2 px-4 py-2 rounded-full bg-blue-100 text-blue-800 font-medium transition-colors duration-150 hover:bg-blue-200 hover:underline focus:outline-2 focus:outline-offset-2 focus:outline-blue-500 active:bg-blue-300">
           <span class="w-2.75 h-2.75 rounded-full bg-blue-800"></span>
           Experience
@@ -35,7 +36,47 @@
           Contact
         </a>
       </div>
+      <!-- Menu button (visible below md) -->
+      <button
+        id="menu-toggle"
+        type="button"
+        aria-label="Open menu"
+        aria-expanded="false"
+        aria-controls="mobile-menu"
+        class="md:hidden flex flex-col justify-center items-center w-10 h-5 gap-1.5 relative z-50 focus:outline-2 focus:outline-offset-2 focus:outline-zinc-500 rounded-md"
+      >
+        <!-- Hamburger icon -->
+        <svg id="icon-open" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+          <line x1="4" y1="7" x2="20" y2="7"/>
+          <line x1="4" y1="12" x2="20" y2="12"/>
+          <line x1="4" y1="17" x2="20" y2="17"/>
+        </svg>
+        <!-- Close icon (X) -->
+        <svg id="icon-close" class="w-5 h-5 hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+          <line x1="6" y1="6" x2="18" y2="18"/>
+          <line x1="18" y1="6" x2="6" y2="18"/>
+        </svg>
+      </button>
     </nav>
+    <!-- Mobile fullscreen menu -->
+    <div
+      id="mobile-menu"
+      class="md:hidden fixed inset-0 z-40 bg-taupe-100 opacity-0 pointer-events-none transition-opacity duration-300 flex flex-col items-center pt-20 gap-2"
+      aria-hidden="true"
+    >
+      <a href="#experience" class="menu-link flex items-center gap-2 px-4 py-2 rounded-full bg-blue-100 text-blue-800 font-medium transition-colors duration-150 hover:bg-blue-200 hover:underline focus:outline-2 focus:outline-offset-2 focus:outline-blue-500 active:bg-blue-300">
+        <span class="w-2.75 h-2.75 rounded-full bg-blue-800"></span>
+        Experience
+      </a>
+      <a href="#about" class="menu-link flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-100 text-emerald-800 font-medium transition-colors duration-150 hover:bg-emerald-200 hover:underline focus:outline-2 focus:outline-offset-2 focus:outline-emerald-500 active:bg-emerald-300">
+        <span class="w-2.75 h-2.75 rounded-full bg-emerald-800"></span>
+        About
+      </a>
+      <a href="#contact" class="menu-link flex items-center gap-2 px-4 py-2 rounded-full bg-indigo-100 text-indigo-800 font-medium transition-colors duration-150 hover:bg-indigo-200 hover:underline focus:outline-2 focus:outline-offset-2 focus:outline-indigo-500 active:bg-indigo-300">
+        <span class="w-2.75 h-2.75 rounded-full bg-indigo-800"></span>
+        Contact
+      </a>
+    </div>
 
     <span id="top"></span>
 
@@ -336,5 +377,7 @@
         </a>
       </div>
     </section>
+    <!-- Nav bar script -->
+    <script src="./js/scripts.js"></script>
   </body>
 </html>
