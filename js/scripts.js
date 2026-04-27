@@ -1,86 +1,46 @@
-/*!
-* Start Bootstrap - Creative v7.0.6 (https://startbootstrap.com/theme/creative)
-* Copyright 2013-2022 Start Bootstrap
-* Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-creative/blob/master/LICENSE)
-*/
-//
-// Scripts
-//
+(function () {
+  const toggle = document.getElementById('menu-toggle');
+  const menu = document.getElementById('mobile-menu');
+  const links = menu.querySelectorAll('.menu-link');
+  const iconOpen = document.getElementById('icon-open');
+  const iconClose = document.getElementById('icon-close');
+  let isOpen = false;
 
-window.addEventListener('DOMContentLoaded', event => {
+  function openMenu() {
+    isOpen = true;
+    menu.classList.remove('opacity-0', 'pointer-events-none');
+    menu.classList.add('opacity-100');
+    menu.setAttribute('aria-hidden', 'false');
+    toggle.setAttribute('aria-expanded', 'true');
+    toggle.setAttribute('aria-label', 'Close menu');
+    document.body.style.overflow = 'hidden';
 
-    // Navbar shrink function
-    var navbarShrink = function () {
-        const navbarCollapsible = document.body.querySelector('#mainNav');
-        if (!navbarCollapsible) {
-            return;
-        }
-        if (window.scrollY === 0) {
-            navbarCollapsible.classList.remove('navbar-shrink')
-        } else {
-            navbarCollapsible.classList.add('navbar-shrink')
-        }
+    iconOpen.classList.add('hidden');
+    iconClose.classList.remove('hidden');
+  }
 
-    };
+  function closeMenu() {
+    isOpen = false;
+    menu.classList.add('opacity-0', 'pointer-events-none');
+    menu.classList.remove('opacity-100');
+    menu.setAttribute('aria-hidden', 'true');
+    toggle.setAttribute('aria-expanded', 'false');
+    toggle.setAttribute('aria-label', 'Open menu');
+    document.body.style.overflow = '';
 
-    // Shrink the navbar
-    navbarShrink();
+    iconOpen.classList.remove('hidden');
+    iconClose.classList.add('hidden');
+  }
 
-    // Shrink the navbar when page is scrolled
-    document.addEventListener('scroll', navbarShrink);
+  toggle.addEventListener('click', () => {
+    isOpen ? closeMenu() : openMenu();
+  });
 
-    // Activate Bootstrap scrollspy on the main nav element
-    const mainNav = document.body.querySelector('#mainNav');
-    if (mainNav) {
-        new bootstrap.ScrollSpy(document.body, {
-            target: '#mainNav',
-            offset: 74,
-        });
-    };
+  links.forEach((link) => {
+    link.addEventListener('click', closeMenu);
+  });
 
-    // Collapse responsive navbar when toggler is visible
-    const navbarToggler = document.body.querySelector('.navbar-toggler');
-    const responsiveNavItems = [].slice.call(
-        document.querySelectorAll('#navbarResponsive .nav-link')
-    );
-    responsiveNavItems.map(function (responsiveNavItem) {
-        responsiveNavItem.addEventListener('click', () => {
-            if (window.getComputedStyle(navbarToggler).display !== 'none') {
-                navbarToggler.click();
-            }
-        });
-    });
-
-    // Activate SimpleLightbox plugin for portfolio items
-    new SimpleLightbox({
-        elements: '#portfolio a.portfolio-box'
-    });
-
-    // Animate on scroll
-    var animateOnScroll = function () {
-        var animatedEls = document.querySelectorAll('h1');
-        animatedEls.forEach(function(el) {
-            var vwTop = window.pageYOffset;
-            var vwBottom = (window.pageYOffset + window.innerHeight);
-            var elTop = el.offsetTop;
-            var elHeight = el.offsetHeight;
-
-            if (vwBottom > elTop && ((vwTop - elHeight) < elTop)) {
-                el.classList.add('animate__fadeIn');
-            } else {
-                el.classList.remove('animate__fadeIn');
-            }
-        });
-    };
-    // Activate animation
-    animateOnScroll();
-    // Activate animation when page is scrolled
-    document.addEventListener('scroll', animateOnScroll);
-
-    // Calculate years
-    const startYear = 2015;
-    const currentYear = new Date().getFullYear();
-    const yearsInTech = currentYear - startYear;
-    document.getElementById('yearsInTech').textContent = yearsInTech;
-
-});
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && isOpen) closeMenu();
+  });
+})();
